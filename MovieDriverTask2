@@ -1,0 +1,59 @@
+import java.util.*;
+public class MovieDriverTask2 {
+//	 Class: CMSC203 CRN 21076
+//	 Program: Lab 1
+//	 Instructor: Professor Khandan Monshi
+//	 Summary of Description: Creating a driver class to test the movie class
+//	 Due Date: 09/29/2022 
+//	 Integrity Pledge: I, Dashawna Lara, pledge that I, Dashawna Lara, have completed the programming assignment independently.
+//	 I, Dashawna Lara, have not copied the code from a student or any source.
+	public static void main(String[] args) {
+		//Creating a scanner object for user input
+		Scanner input = new Scanner(System.in);
+		
+		//Variables for user input
+		String answer = "Yes";
+		String movieTitle;
+		String rating;
+		int ticketsSold;
+		
+		//Creating an instance of Movie
+		Movie movie = new Movie();
+		
+		//Creating a loop so the user can enter in more movies if they wish
+		do{
+			//User enters movies title and the program sets that title into the movie instance
+			System.out.println("Enter the title of a movie: ");
+			movieTitle = input.next();
+			movie.setTitle(movieTitle);
+		
+			//User enters the rating to the title they just entered
+			System.out.println("Enter the movie's rating: ");
+			rating = input.next();
+			movie.setRating(rating);
+			
+			//User enters the amount of tickets sold for the movie 
+			System.out.println("Enter the number of tickets sold for this movie: ");
+			ticketsSold = input.nextInt();
+			movie.setSoldTickets(ticketsSold);
+			
+			//Consuming the extra whitespace character
+			input.nextLine();
+			
+			//Printing out all the information the user has just entered
+			System.out.println(movie.toString());
+			
+			//User decides if they want to continue or not
+			System.out.println("Do you want to enter another?(yes or no): ");
+			answer = input.next();
+		
+			//If the user wants to continue they can or the program can end
+		}while(answer.equalsIgnoreCase("Yes"));
+		
+		System.out.println("Goodbye\nProgrammer: Dashawna Lara");
+		
+		//Closing the scanner object
+		input.close();
+	}
+	
+}
