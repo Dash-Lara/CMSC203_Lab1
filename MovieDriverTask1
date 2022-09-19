@@ -1,7 +1,13 @@
 import java.util.Scanner;
 
 public class MovieDriverTask1 {
-
+//	 Class: CMSC203 CRN 21076
+//	 Program: Lab 1
+//	 Instructor: Professor Khandan Monshi
+//	 Summary of Description: Creating a driver class to test the movie class
+//	 Due Date: 09/29/2022 
+//	 Integrity Pledge: I, Dashawna Lara, pledge that I, Dashawna Lara, have completed the programming assignment independently.
+//	 I, Dashawna Lara, have not copied the code from a student or any source.
 	public static void main(String[] args) {
 		//Creating a scanner object for user input
 		Scanner input = new Scanner(System.in);
